@@ -24,6 +24,12 @@ metaprockill () {
 		sed -i '$ d' tempproclist.txt
 		metaprockill
 	fi
+	echo 'ow'
 }
 
-metaprockill
+trap metaprockill EXIT
+while [ 0 ]; do
+	sleep 60 #replace this with actual monitor code
+done
+
+
