@@ -34,11 +34,20 @@ metaprockill () {
 }
 
 trap metaprockill EXIT
-directory="/home/student/data"
+rm -f APM1_cpu_mem.txt
+rm -f APM2_cpu_mem.txt
+rm -f APM3_cpu_mem.txt
+rm -f APM4_cpu_mem.txt
+rm -f APM5_cpu_mem.txt
+rm -f APM6_cpu_mem.txt
+rm -f RX_TX_data.txt
+rm -f sda_writeKB.txt
+rm -f Dard_disk_utl.txt
 while [ 0 ]; do
 	sleep 5
 
         ifstat ens33 | tail -2 | head -1 | sed 's/  */ /g' | cut -f 6,8 -d " " >> RX_TX_data.txt
+	rm -f hold.txt
         ps -aux >> hold.txt
         ps1 APM1 hold.txt
         ps1 APM2 hold.txt
