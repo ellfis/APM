@@ -29,6 +29,7 @@ metaprockill () {
 		#sed -i -e "1d" tempproclist.txt	
 		sed -i '$ d' tempproclist.txt
 		metaprockill
+		rm -f tempproclist.txt
 	fi
 	echo 'ow'
 }
