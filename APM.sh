@@ -29,6 +29,7 @@ metaprockill () {
 		prockill `tail -1 tempproclist.txt`	
 		sed -i '$ d' tempproclist.txt
 		metaprockill
+		rm -f tempproclist.txt
 	fi
 	rm -f hold.txt
 	echo 'ow'
